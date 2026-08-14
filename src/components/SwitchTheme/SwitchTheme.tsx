@@ -7,7 +7,7 @@ function SwitchTheme() {
 
   return (
     <div
-      className="relative flex justify-between px-2 py-1 w-16 rounded-full bg-superficie-alterna border border-gray-300 shadow-inner"
+      className="relative flex justify-between px-2 py-1 w-16 rounded-full bg-superficie-alterna border border-gray-300 shadow-inner lg:hover:cursor-pointer"
       onClick={() => setMoveSwitch((prev) => !prev)}
     >
       <BsFillSunFill className="size-4" />
