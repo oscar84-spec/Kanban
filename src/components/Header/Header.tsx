@@ -10,7 +10,7 @@ function Header({ setOpenSidebar, openSidebar }: HeaderProps) {
   return (
     <div className="sticky top-0 z-50 w-full px-5">
       {/* Contenedor centrado, máximo 1000px en desktop, responsive por debajo */}
-      <header className="mx-auto flex h-14 w-full max-w-250 items-center justify-between rounded-full bg-background/50 px-4 shadow-md backdrop-blur-3xl border border-background/20 sm:px-6">
+      <header className="mx-auto flex h-14 w-full max-w-250 items-center justify-between rounded-full bg-background px-4 shadow-md backdrop-blur-3xl border border-border/20 sm:px-6 dark:bg-background-dark dark:border-bordes-dark">
         <div className={"flex gap-2 items-center"}>
           <div className={" bg-linear-to-br from-primary to-accent rounded-md"}>
             <LuKanban className={"size-7 stroke-background"} />
@@ -31,7 +31,8 @@ function Header({ setOpenSidebar, openSidebar }: HeaderProps) {
               <Link
                 to={item.href}
                 key={index}
-                className="text-gray-500 hover:text-text-primary hover:cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out"
+                className="text-gray-500 hover:text-text-primary hover:cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out
+                dark:text-text-secundario-dark dark:hover:text-text-dark"
               >
                 {item.text}
               </Link>
@@ -43,12 +44,12 @@ function Header({ setOpenSidebar, openSidebar }: HeaderProps) {
 
           {openSidebar ? (
             <IoIosClose
-              className="size-5 lg:hidden"
+              className="size-5 lg:hidden fill-primary-dark-dark dark:fill-accent-dark"
               onClick={() => setOpenSidebar(false)}
             />
           ) : (
             <IoMenu
-              className="size-5 lg:hidden"
+              className="size-5 lg:hidden fill-primary-dark dark:stroke-accent"
               onClick={() => setOpenSidebar(true)}
             />
           )}

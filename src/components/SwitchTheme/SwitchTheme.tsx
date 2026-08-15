@@ -1,17 +1,23 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BsFillSunFill } from "react-icons/bs";
 import { useState } from "react";
+import { useThemeStore } from "@stores/theme/theme.store.ts";
 
 function SwitchTheme() {
   const [moveSwitch, setMoveSwitch] = useState<boolean>(false);
 
+  const { toggleTheme } = useThemeStore();
+
   return (
     <div
-      className="relative flex justify-between px-2 py-1 w-16 rounded-full bg-superficie-alterna border border-gray-300 shadow-inner lg:hover:cursor-pointer"
-      onClick={() => setMoveSwitch((prev) => !prev)}
+      className="relative flex justify-between px-2 py-1 w-16 rounded-full bg-superficie-alterna border border-border shadow-inner lg:hover:cursor-pointer dark:bg-superficie-alterna-dark dark:border-bordes-dark"
+      onClick={() => {
+        setMoveSwitch((prev) => !prev);
+        toggleTheme();
+      }}
     >
-      <BsFillSunFill className="size-4" />
-      <BsFillMoonStarsFill className="size-4" />
+      <BsFillSunFill className="size-4 fill-primary-dark" />
+      <BsFillMoonStarsFill className="size-4 fill-primary-dark" />
 
       <div
         className={`absolute top-1/2 left-2 -translate-y-1/2 size-5 rounded-full bg-linear-to-br from-primary to-accent border border-blue-500 transition-transform duration-500 ease-in-out ${moveSwitch ? "translate-x-7" : "translate-x-0"}`}

@@ -1,6 +1,17 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  * {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: ease;
+    transition-duration: 200ms;
+  }
+}
+
 @theme {
+  /*Para el tema claro*/
   --color-background: #f7f7fb;
   --color-superficie: #ffffff;
   --color-superficie-alterna: #f0f1f7;
@@ -25,4 +36,16 @@
     var(--color-accent) 25%,
     transparent
   );
+
+  /*Para el tema oscuro*/
+
+  --color-background-dark: #12131c;
+  --color-superficie-dark: #1a1b29;
+  --color-superficie-alterna-dark: #212233;
+  --color-text-dark: #ededf7;
+  --color-text-secundario-dark: #9a9cb5;
+  --color-bordes-dark: #2e3044;
+  --color-primary-dark-mode: #8b84ff;
+  --color-primary-dark-dark: #6a62e8;
+  --color-accent-dark: #2fe0a8;
 }

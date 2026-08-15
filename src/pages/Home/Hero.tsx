@@ -12,7 +12,7 @@ function Hero() {
 
   return (
     <section
-      className={`relative min-h-screen bg-background ${radialGradient} overflow-x-hidden`}
+      className={`relative min-h-screen bg-background ${radialGradient} overflow-x-hidden dark:bg-background-dark`}
     >
       <Header openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
       <Sidebar openSidebar={openSidebar} />
