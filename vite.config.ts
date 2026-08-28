@@ -14,6 +14,7 @@ export default defineConfig({
       "@components": path.resolve(src, "./src/components"),
       "@pages": path.resolve(src, "./src/pages"),
       "@stores": path.resolve(src, "./src/stores"),
+      "@ui": path.resolve(src, "./src/ui"),
     },
   },
 });

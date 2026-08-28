@@ -2,6 +2,7 @@ import Header from "@components/Header/Header.tsx";
 import { useState } from "react";
 import Sidebar from "@components/Sidebar/Sidebar.tsx";
 import Button from "@/components/Button/Button";
+import KanbanDemo from "@/ui/KanbanDemo/KanbanDemo";
 
 function Hero() {
   //Estado para abri el menu en la version mobile
@@ -18,7 +19,7 @@ function Hero() {
       <Header openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
       <Sidebar openSidebar={openSidebar} />
 
-      <div className="px-5 lg:w-full lg:h-[calc(100vh-56px)] lg:flex lg:items-center xl:px-20">
+      <div className="px-5 lg:w-full lg:h-[calc(100vh-56px)] lg:flex lg:items-center lg:justify-between lg:gap-10 xl:px-20">
         <div className=" mt-10 lg:w-1/2 lg:mt-0">
           <h1 className="text-3xl font-semibold text-text-primary dark:text-text-dark md:text-5xl xl:text-6xl">
             Organiza el trabajo de tu equipo, a tu manera.
@@ -51,6 +52,7 @@ function Hero() {
             </span>
           </div>
         </div>
+        <KanbanDemo />
       </div>
     </section>
   );
