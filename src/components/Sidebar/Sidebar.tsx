@@ -7,7 +7,7 @@ function Sidebar({ openSidebar }: SidebarProps) {
 
   return (
     <div
-      className={`absolute top-0 left-0 w-full h-screen bg-superficie-alterna ${moveSidebar} transition-transform duration-500 ease-in-out lg:hidden dark:bg-superficie-dark`}
+      className={`absolute top-0 left-0 w-full h-screen bg-superficie-alterna ${moveSidebar} transition-transform duration-500 ease-in-out lg:hidden dark:bg-superficie-dark z-40`}
     >
       <nav className="absolute top-18 left-0 px-5 flex flex-col gap-5 w-full">
         <ul className="flex flex-col gap-3">
