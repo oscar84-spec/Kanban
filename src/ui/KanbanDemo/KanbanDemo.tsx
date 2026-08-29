@@ -3,7 +3,7 @@ import { KANBAN_DEMO_HERO } from "./const.kanban_demo";
 
 const KanbanDemo = () => {
   return (
-    <div className="mt-10 w-full lg:w-1/2">
+    <div className="mt-10 w-full shadow-xl lg:w-1/2">
       <div className="max-w-lg rounded-2xl border border-border bg-superficie p-5 dark:border-bordes-dark dark:bg-superficie-dark -rotate-1 lg:max-w-full">
         <div className="flex items-center gap-2">
           <div className="flex gap-2">
@@ -20,7 +20,7 @@ const KanbanDemo = () => {
         <div className="mt-3 flex h-72 w-full gap-3 overflow-x-auto">
           {KANBAN_DEMO_HERO.map((item, index) => (
             <div
-              className="min-w-56 p-2 flex-1 bg-superficie-alterna dark:bg-superficie-alterna-dark rounded-lg flex flex-col gap-2"
+              className="min-w-56 p-2 flex-1 bg-superficie-alterna dark:bg-superficie-alterna-dark rounded-lg flex flex-col gap-2 xl:min-w-32"
               key={index}
             >
               <span className="text-lg font-semibold text-text-secondary">
