@@ -1,6 +1,7 @@
 import Hero from "@pages/Home/Hero.tsx";
 import Features from "./Features";
 import { bgAccent, bgPrimary, bgSecondary } from "./const.home";
+import Testimonials from "./Testimonials";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
         <Hero />
         <Features />
       </div>
+      <Testimonials />
     </main>
   );
 }

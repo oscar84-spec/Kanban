@@ -9,3 +9,10 @@ export interface FeaturesCards {
   icon: ComponentType<IconProps>;
   variant: FeatureVariant;
 }
+
+//Tipos para las cards de la seccion de testimonios
+export interface TestimonilasCards {
+  testimonio: string;
+  nombre: string;
+  area: string;
+}

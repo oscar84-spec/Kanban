@@ -6,7 +6,7 @@ import {
   SecurityIcon,
   ViewsIcon,
 } from "@icons/index";
-import type { FeaturesCards } from "./types.home";
+import type { FeaturesCards, TestimonilasCards } from "./types.home";
 
 export const bgPrimary =
   "w-[320px] h-80 absolute -top-32 -left-32 bg-primary opacity-35 blur-[90px] rounded-full";
@@ -59,5 +59,27 @@ export const FEATURES_CARDS: FeaturesCards[] = [
       "Permisos granulares y cifrado de extremo a extremo en cada tablero.",
     icon: SecurityIcon,
     variant: "accent",
+  },
+];
+
+//Arrays para las cards de la seccion testimonios
+export const TESTIMONIALS_CARDS: TestimonilasCards[] = [
+  {
+    testimonio:
+      '"Reemplazamos tres herramientas distintas por Flowboard. El equipo de marketing por fin ve todo en un solo tablero."',
+    nombre: "María Castillo",
+    area: "Directora de Marketing, Vento",
+  },
+  {
+    testimonio:
+      '"La automatización nos ahorra horas cada semana. Configuramos reglas en minutos, sin depender de ingeniería."',
+    nombre: "Jorge Ruiz",
+    area: "Líder de Operaciones, Nortek",
+  },
+  {
+    testimonio:
+      '"La curva de aprendizaje fue cero. Todo el equipo lo adoptó en el primer día, sin capacitación."',
+    nombre: "Lucía Álvarez",
+    area: "Product Manager, Solví",
   },
 ];

@@ -1,6 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import { FEATURES_CARDS } from "./const.home";
 import type { FeatureVariant } from "./types.home";
+import Section from "@/components/Section/Section";
 
 const iconWrapperVariantClass = (variant: FeatureVariant) => {
   switch (variant) {
@@ -13,25 +14,16 @@ const iconWrapperVariantClass = (variant: FeatureVariant) => {
 };
 
 const Features = () => {
+  const description =
+    "Desde tableros simples hasta flujos complejos, con las herramientas justas para no perder el ritmo.";
+
   return (
-    <section className="bg-background px-5 py-5 text-text-secondary dark:bg-background-dark dark:text-text-secundario-dark xl:px-20 2xl:px-44 flex flex-col gap-5">
-      <h2 className=" text-accent font-bold tracking-wider text-center">
-        CARACTERÍSTICAS
-      </h2>
-
-      <div className="flex flex-col gap-2">
-        <span
-          className="text-text-primary font-bold text-xl text-center md:text-2xl lg:text-3xl xl:text-4xl
-        dark:text-text-dark"
-        >
-          Todo lo que tu equipo necesita
-        </span>
-        <span className="text-text-secondary text-center md:text-lg xl:text-xl dark:text-text-secundario-dark">
-          Desde tableros simples hasta flujos complejos, con las herramientas
-          justas para no perder el ritmo.
-        </span>
-      </div>
-
+    <Section
+      section="CARACTERÍSTICAS"
+      title="Todo lo que tu equipo necesita"
+      description={description}
+      variant="secondary"
+    >
       <div className="flex flex-col gap-3 md:grid md:grid-cols-3 xl:grid-cols-4 xl:gap-5">
         {FEATURES_CARDS.map((item, index) => (
           <div
@@ -57,7 +49,7 @@ const Features = () => {
           </div>
         ))}
       </div>
-    </section>
+    </Section>
   );
 };
 
