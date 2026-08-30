@@ -6,7 +6,12 @@ import {
   SecurityIcon,
   ViewsIcon,
 } from "@icons/index";
-import type { FeaturesCards, TestimonilasCards } from "./types.home";
+import type {
+  FeaturesCards,
+  PricesCards,
+  TestimonilasCards,
+} from "./types.home";
+import { FaCheck } from "react-icons/fa";
 
 export const bgPrimary =
   "w-[320px] h-80 absolute -top-32 -left-32 bg-primary opacity-35 blur-[90px] rounded-full";
@@ -81,5 +86,50 @@ export const TESTIMONIALS_CARDS: TestimonilasCards[] = [
       '"La curva de aprendizaje fue cero. Todo el equipo lo adoptó en el primer día, sin capacitación."',
     nombre: "Lucía Álvarez",
     area: "Product Manager, Solví",
+  },
+];
+
+//Array para las cards de la seccion prices
+export const PRICES_CARDS: PricesCards[] = [
+  {
+    plan: "Gratis",
+    description: "Para probar y empezar",
+    price: 0,
+    text_button: "Empezar",
+    highlight: false,
+    benefist: [
+      { icon: FaCheck, benefit: "3 tableros activos" },
+      { icon: FaCheck, benefit: "Hasta 10 miembros" },
+      { icon: FaCheck, benefit: "Automatizaciones básicas" },
+      { icon: FaCheck, benefit: "Historial de 30 días" },
+    ],
+  },
+  {
+    plan: "Pro",
+    description: "Para equipos en crecimiento",
+    price: 9,
+    text_button: "Probar 14 días gratis",
+    highlight: true,
+    benefist: [
+      { icon: FaCheck, benefit: "Tableros ilimitados" },
+      { icon: FaCheck, benefit: "Miembros ilimitados" },
+      { icon: FaCheck, benefit: "Automatizaciones avanzadas" },
+      { icon: FaCheck, benefit: "Vistas de calendario y línea de tiempo" },
+      { icon: FaCheck, benefit: "Soporte prioritario" },
+    ],
+  },
+  {
+    plan: "Equipos",
+    description: "Para organizaciones completas",
+    price: 19,
+    text_button: "Contactar Ventas",
+    highlight: false,
+    benefist: [
+      { icon: FaCheck, benefit: "Todo lo de Pro" },
+      { icon: FaCheck, benefit: "Permisos por rol" },
+      { icon: FaCheck, benefit: "SSO y auditoría" },
+      { icon: FaCheck, benefit: "Panel de administración" },
+      { icon: FaCheck, benefit: "Soporte dedicado" },
+    ],
   },
 ];
