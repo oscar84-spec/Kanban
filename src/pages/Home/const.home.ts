@@ -8,6 +8,7 @@ import {
 } from "@icons/index";
 import type {
   FeaturesCards,
+  FooterList,
   PricesCards,
   TestimonilasCards,
 } from "./types.home";
@@ -131,5 +132,21 @@ export const PRICES_CARDS: PricesCards[] = [
       { icon: FaCheck, benefit: "Panel de administración" },
       { icon: FaCheck, benefit: "Soporte dedicado" },
     ],
+  },
+];
+
+//Array para las listas del footer
+export const FOOTER_LIST: FooterList[] = [
+  {
+    typeList: "Producto",
+    listItem: ["Características", "Precios", "Integraciones", "Novedades"],
+  },
+  {
+    typeList: "Recursos",
+    listItem: ["Guías", "Plantillas", "Comunidad", "Centro de ayuda"],
+  },
+  {
+    typeList: "Empresa",
+    listItem: ["Sobre nosotros", "Empleo", "Contacto", "Prensa"],
   },
 ];

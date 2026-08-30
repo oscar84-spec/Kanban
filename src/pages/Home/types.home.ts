@@ -35,3 +35,11 @@ export interface PricesCards {
   highlight: boolean;
   benefist: Benefits[];
 }
+
+//Tipos para las listas del footer
+type typeFeature = "Producto" | "Recursos" | "Empresa";
+
+export interface FooterList {
+  typeList: typeFeature;
+  listItem: string[];
+}

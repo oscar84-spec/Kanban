@@ -3,6 +3,7 @@ import Features from "./Features";
 import { bgAccent, bgPrimary, bgSecondary } from "./const.home";
 import Testimonials from "./Testimonials";
 import Prices from "./Prices";
+import Footer from "./Footer";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       </div>
       <Testimonials />
       <Prices />
+      <Footer />
     </main>
   );
 }

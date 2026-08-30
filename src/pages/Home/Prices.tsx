@@ -61,6 +61,7 @@ const Prices = () => {
       title="Un plan para cada equipo"
       description="Empieza gratis. Mejora cuando lo necesites."
       variant="secondary"
+      className="pb-30"
     >
       <div className="w-full flex flex-col gap-8 items-center">
         <div className="p-1 rounded-full bg-superficie-alterna dark:bg-superficie-alterna-dark border border-border/10 flex justify-between max-w-72 w-full">
