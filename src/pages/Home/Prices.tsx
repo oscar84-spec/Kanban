@@ -104,21 +104,27 @@ const Prices = () => {
                 </div>
               )}
               <div className="flex flex-col gap-0">
-                <span className="text-xl text-text-primary dark:text-text-dark font-semibold">
+                <span
+                  className={`text-xl dark:text-text-dark font-semibold ${index === 1 ? "text-text-dark" : ""}`}
+                >
                   {item.plan}
                 </span>
-                <span className="text-text-secondary dark:text-text-secundario-dark">
+                <span
+                  className={` dark:text-text-secundario-dark ${index === 1 ? "text-text-secundario-dark" : ""}`}
+                >
                   {item.description}
                 </span>
               </div>
 
-              <span className="text-4xl font-bold text-text-primary dark:text-text-dark">
+              <span
+                className={`text-4xl font-bold dark:text-text-dark ${index === 1 ? "text-text-dark" : ""}`}
+              >
                 {`$${getPriceByPlan(index, item.price)}`}
               </span>
 
               <Button
                 type="button"
-                className={`${index === 1 ? "dark:bg-superficie dark:text-primary font-semibold border dark:border-primary" : ""}`}
+                className={`${index === 1 ? "dark:bg-superficie dark:text-primary font-semibold border dark:border-primary hover:dark:bg-superficie-alterna" : ""}`}
               >
                 {item.text_button}
               </Button>
@@ -126,7 +132,7 @@ const Prices = () => {
                 {item.benefist.map((listItem, listIndex) => (
                   <li
                     key={listIndex}
-                    className="text-text-primary dark:text-text-dark flex gap-3 items-center"
+                    className={`dark:text-text-dark flex gap-3 items-center ${index === 1 ? "text-text-dark" : ""}`}
                   >
                     <div
                       className={`rounded-full p-0.5 ${getListStyle(index)}`}
