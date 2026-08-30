@@ -66,10 +66,7 @@ const Badge = ({
   return (
     <span
       {...props}
-      className={twMerge(
-        "relative isolate inline-flex overflow-hidden rounded-full p-px",
-        className,
-      )}
+      className="relative isolate inline-flex overflow-hidden rounded-full p-px"
     >
       <span
         aria-hidden
@@ -79,13 +76,17 @@ const Badge = ({
         )}
       />
 
-      <span
-        className={twMerge(
-          "relative z-10 inline-flex items-center rounded-full bg-superficie px-3 py-1 text-xs font-medium dark:bg-superficie-dark",
-          textVariantClass(variant),
+      <span className="relative isolate z-10 inline-flex items-center overflow-hidden rounded-full bg-superficie px-3 py-1 text-xs font-medium dark:bg-superficie-dark">
+        {className && (
+          <span
+            aria-hidden
+            className={twMerge("absolute inset-0 rounded-full", className)}
+          />
         )}
-      >
-        {children}
+
+        <span className={twMerge("relative", textVariantClass(variant))}>
+          {children}
+        </span>
       </span>
     </span>
   );
