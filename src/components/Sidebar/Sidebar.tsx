@@ -1,6 +1,7 @@
 import type { SidebarProps } from "@components/Sidebar/sidebar.types.ts";
 import { listMenu } from "@/global/global.ts";
 import { Link } from "react-router-dom";
+import Button from "@components/Button/Button";
 
 function Sidebar({ openSidebar }: SidebarProps) {
   const moveSidebar = openSidebar ? "translate-x-0" : "translate-x-full";
@@ -23,18 +24,10 @@ function Sidebar({ openSidebar }: SidebarProps) {
         </ul>
 
         <div className="flex flex-col gap-3 w-full">
-          <button
-            type="button"
-            className="outline-none w-full p-2 rounded-md border border-blue-500"
-          >
-            Iniciar Sesión
-          </button>
-          <button
-            type="button"
-            className="outline-none w-full p-2 rounded-md border border-green-500"
-          >
-            Iniciar Sesión
-          </button>
+          <Button type="button">Iniciar sesión</Button>
+          <Button type="button" variant="primary">
+            Registrarse
+          </Button>
         </div>
       </nav>
     </div>

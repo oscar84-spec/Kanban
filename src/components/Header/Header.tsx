@@ -5,6 +5,7 @@ import { IoIosClose } from "react-icons/io";
 import type { HeaderProps } from "@components/Header/header.types.ts";
 import { listMenu } from "@/global/global.ts";
 import { Link } from "react-router-dom";
+import Button from "@components/Button/Button";
 
 function Header({ setOpenSidebar, openSidebar }: HeaderProps) {
   return (
@@ -41,6 +42,18 @@ function Header({ setOpenSidebar, openSidebar }: HeaderProps) {
         </nav>
         <div className="flex gap-2 items-center">
           <SwitchTheme />
+          <div className="hidden items-center gap-2 sm:flex">
+            <Button type="button" className="px-3 py-1.5 text-xs">
+              Iniciar sesión
+            </Button>
+            <Button
+              type="button"
+              variant="primary"
+              className="px-3 py-1.5 text-xs"
+            >
+              Registrarse
+            </Button>
+          </div>
 
           {openSidebar ? (
             <IoIosClose
