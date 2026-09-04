@@ -1,12 +1,13 @@
 import Header from "@components/Header/Header.tsx";
-import { useState } from "react";
 import Sidebar from "@components/Sidebar/Sidebar.tsx";
 import Button from "@/components/Button/Button";
 import KanbanDemo from "@/ui/KanbanDemo/KanbanDemo";
+import { useStoreSidebar } from "@/stores/sidebar/sidebar.store";
 
 function Hero() {
   //Estado para abri el menu en la version mobile
-  const [openSidebar, setOpenSidebar] = useState<boolean>(false);
+  const openSidebar = useStoreSidebar((state) => state.openSidebar);
+  const setOpenSidebar = useStoreSidebar((state) => state.setOpenSidebar);
 
   return (
     <section className={` bg-background dark:bg-background-dark`}>
