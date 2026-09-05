@@ -16,14 +16,15 @@ function Header({ setOpenSidebar, openSidebar }: HeaderProps) {
           <div className={" bg-linear-to-br from-primary to-accent rounded-md"}>
             <LuKanban className={"size-7 stroke-background"} />
           </div>
-          <span
+          <Link
+            to="/"
             className={
               "text-xl font-bold bg-linear-to-br from-primary to-accent" +
               " bg-clip-text text-transparent"
             }
           >
             TaskFlow
-          </span>
+          </Link>
         </div>
         {/*Menu para la version desktop*/}
         <nav className="hidden lg:block">
